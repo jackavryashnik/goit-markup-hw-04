@@ -67,10 +67,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #404bbf;
-}
-
 button:focus,
 button:active {
   background-color: #404bbf;
@@ -115,6 +111,9 @@ address {
 
 .section {
   padding: 120px 0;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container {
@@ -125,6 +124,8 @@ address {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -226,6 +227,8 @@ address {
   background-color: var(--dark);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/hero-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -249,6 +252,11 @@ address {
   height: 56px;
 }
 
+.hero-section__btn:hover {
+  background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .about-section {
   display: flex;
   justify-content: center;
@@ -262,7 +270,8 @@ address {
   border-radius: 4px;
   background: #f4f4fd;
   margin-bottom: 8px;
-  padding: 24px 100px;
+  padding: 0 100px;
+  height: 112px;
 }
 
 .visually-hidden {
@@ -312,7 +321,7 @@ address {
   border-radius: 0px 0px 4px 4px;
   width: calc((100% - 72px) / 4);
   background: var(--WHITE, #ffffff);
-  border: 1px solid var(--CORNFLOWER, #E7E9FC); 
+  border: 1px solid var(--CORNFLOWER, #e7e9fc);
 }
 
 .list__item:hover {
@@ -409,6 +418,10 @@ address {
 .footer__social-links {
   display: flex;
   gap: 16px;
+}
+
+.footer__social-links li {
+  background-color: var(--dark);
 }
 
 .flex-center {
