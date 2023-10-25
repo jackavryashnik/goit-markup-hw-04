@@ -169,6 +169,14 @@ address {
   letter-spacing: 0.02em;
 }
 
+.header__link {
+  color: #404bbf;
+}
+
+.header__link::after {
+  color: #404bbf;
+}
+
 .header__nav {
   display: flex;
   align-items: center;
