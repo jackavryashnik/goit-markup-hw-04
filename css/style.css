@@ -189,11 +189,26 @@ address {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .header__link:hover,
 .header__link:active {
   color: #404bbf;
+}
+
+.header__link:hover::after,
+.header__link:active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
 }
 
 .header__contacts-item {
@@ -204,11 +219,14 @@ address {
 }
 
 .hero-section {
-  background-color: var(--dark);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 188px 0;
+  background-color: var(--dark);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/hero-bg.jpg);
+  background-size: cover;
 }
 
 .hero-section__title {
@@ -234,6 +252,17 @@ address {
 .about-section {
   display: flex;
   justify-content: center;
+}
+
+.about-sectioon__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+  padding: 24px 100px;
 }
 
 .visually-hidden {
@@ -283,8 +312,18 @@ address {
   border-radius: 0px 0px 4px 4px;
   width: calc((100% - 72px) / 4);
   background: var(--WHITE, #ffffff);
+  border: 1px solid var(--CORNFLOWER, #E7E9FC); 
+}
+
+.list__item:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.employee__social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
 .item-container {
@@ -305,6 +344,7 @@ address {
 .item-description {
   color: #434455;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 .item__description {
@@ -332,8 +372,20 @@ address {
   background-color: var(--dark);
 }
 
-.footer .container {
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
   align-items: flex-start;
+}
+
+.footer__social-title {
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+}
+
+.footer__company-slogan {
+  margin-right: 120px;
 }
 
 .footer__logo {
@@ -348,6 +400,15 @@ address {
   color: var(--light);
   letter-spacing: 0.02em;
   max-width: 264px;
+}
+
+.footer__social-title {
+  margin-bottom: 16px;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 16px;
 }
 
 .flex-center {
